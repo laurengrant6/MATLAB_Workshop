@@ -1,0 +1,5 @@
+Experiment ID	 Cookie_Visual_Search
+Subject	 999
+Run Time	 11-Jun-2018 15:12:38
+
+Run Number 	Trial Number 	Task 	Stimulus 	Current Trial Type 	Previous Trial Type	 Fix_Value	 Fix Onset	 Array Onset	 Array_Feedback_Interval_Screen Onset	 Feedback_Onset	 ITI_Fix Onset	 ITI_End	 Response 	RT 	Accuracy 	PreviousAccuracy
