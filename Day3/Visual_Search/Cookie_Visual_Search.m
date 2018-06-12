@@ -52,20 +52,20 @@ BackColor = [0 0 0]; %black
 TextColor = [255 255 255];%white
 FontSizeResp = 30; %instruction font for beginning training run
 FontSizeFix = 50;
-InstructionSizeText = 16;
+InstructionSizeText = 20;
 FontSizeError = 50;
 
 %Task parameters
 nRuns = 2; %the first run is practice so there are really nRuns - 1 runs
 nTrialTypes = 2; %Cookie and Pie
-nPracticeTrials = 48;
-nTrainingTrials = 240; 
+nPracticeTrials = 8;
+nTrainingTrials = 8; 
 StartFixationDuration = 2;%this is just to give the Ps some time before the trial begins
 EndFixationDuration = 2;%same reason, just at the end. it is optional.
 
 Array_Duration = 0.800;
-Array_Feedback_Interval = 1.0;
-Feedback_Duration = 1.5;
+Array_Feedback_Interval = .500;
+Feedback_Duration = 1;
 nUniqueStimuli = 8;
 ITI = 1.0;
 
@@ -89,7 +89,7 @@ PossibleResponses = {'z','m'};
 ScreenNum = 0;
 
 if ismac == 1
-    RestrictKeysForKbCheck([29, 16,44,41]);
+    RestrictKeysForKbCheck([29,16,44,41]);
 
 else
     %Enable KbCheck to look only for task-relevant button presses.
@@ -109,34 +109,32 @@ y0 = ScreenRect (4)/2;
 
 %===============Stimuli Size, Coordinates, & Stimuli======================%
 %Stimuli Size
-ysize = 121;
-xsize = 121;
+ysize = 200;
+xsize = 200;
 
-%Coordinates
+%up coordinates: (0, -300)
+x_up = 0;  
+y_up = -300;
 
-%up coordinates:
-x_up = 0;
-y_up = -181;
+%up_left coordinates: (-150, -300)
+x_up_left = -300;  
+y_up_left = -150;
 
-%up_left coordinates:
-x_up_left = -181;
-y_up_left = -91;
+%up_right coordinates: (-150, 300)
+x_up_right = 300;  
+y_up_right = -150;
 
-%up_right coordinates:
-x_up_right = 181;
-y_up_right = -91;
+%down coordinates: (0,300)
+x_down = 0;  
+y_down = 300;
 
-%down coordinates:
-x_down = 0;
-y_down = 181;
+%down_left coordinates: (-300,150)
+x_down_left= -300;  
+y_down_left = 150;
 
-%down_left coordinates:
-x_down_left= -181;
-y_down_left = 91;
-
-%down_right coordinates:
-x_down_right= 181;
-y_down_right = 91;
+%down_right coordinates: (300,150)
+x_down_right= 300;  
+y_down_right = 150;
 
 %Plotting coordinates
 %Up (upper half of circle)
@@ -313,17 +311,16 @@ for Run = 1:nRuns
                 Stimulus{ThisTrial} = double('Cookie');
                 CorrectResponse{ThisTrial} = PossibleResponses{1};
             case {2,7}
-                Stimulus{ThisTrial} = double('Pie');
-                CorrectResponse{ThisTrial} = PossibleResponses{2};
-            case {3,6}
                 Stimulus{ThisTrial} = double('Cookie');
                 CorrectResponse{ThisTrial} = PossibleResponses{1};
+            case {3,6}
+                Stimulus{ThisTrial} = double('Pie');
+                CorrectResponse{ThisTrial} = PossibleResponses{2};
             case {4,5}
                 Stimulus{ThisTrial} = double('Pie'); 
                 CorrectResponse{ThisTrial} = PossibleResponses{2};
         end
         
-        %TrialType
         
         %CurrTrialType
         if (StimulusSequence(ThisTrial) < 3)
@@ -567,7 +564,7 @@ for Run = 1:nRuns
         if (nKeys == 0)
             
             nKeys = nKeys + 1;
-            RT(nKeys) = 5000;
+            RT(nKeys) = 99999;
             keys{nKeys} = 'Omission';
             
         end%if
@@ -606,6 +603,10 @@ for Run = 1:nRuns
             
             Screen('TextSize',windowPtr, FontSizeError);
             DrawFormattedText(windowPtr,'Error','center', 'center', TextColor);
+            
+        else
+            Screen('TextSize',windowPtr, FontSizeError);
+            DrawFormattedText(windowPtr,'Correct','center', 'center', TextColor);
             
         end%if
         

@@ -1,12 +1,14 @@
 Experiment ID	 Cookie_Visual_Search
 Subject	 999
-Run Time	 11-Jun-2018 15:19:55
+Run Time	 11-Jun-2018 17:43:14
 
 Run Number 	Trial Number 	Task 	Stimulus 	Current Trial Type 	Previous Trial Type	 Fix_Value	 Fix Onset	 Array Onset	 Array_Feedback_Interval_Screen Onset	 Feedback_Onset	 ITI_Fix Onset	 ITI_End	 Response 	RT 	Accuracy 	PreviousAccuracy
-practice	 1	 Search_Task_odd	 Cookie	 Cookie	 None	 0.400000	 1.997328	 2.980989	 3.214017	 4.214193	 5.714093	 6.692089	 Omission	 5000.000000	 Omission	 None
-practice	 2	 Search_Task_even	 Cookie	 Cookie	 Cookie	 0.400000	 6.713871	 7.647108	 7.913048	 8.914430	 10.413381	 11.391889	 Omission	 5000.000000	 Omission	 Omission
-practice	 3	 Search_Task_odd	 Pie	 Pie	 Cookie	 0.600000	 11.414018	 12.446734	 12.814334	 13.814681	 15.313962	 16.292107	 Omission	 5000.000000	 Omission	 Omission
-practice	 4	 Search_Task_even	 Pie	 Cookie	 Pie	 0.600000	 16.313635	 17.332022	 17.713630	 18.713767	 20.213328	 21.191716	 Omission	 5000.000000	 Omission	 Omission
-practice	 5	 Search_Task_odd	 Cookie	 Pie	 Cookie	 0.500000	 21.213659	 22.197423	 22.513556	 23.513901	 25.014197	 25.991712	 Omission	 5000.000000	 Omission	 Omission
-practice	 6	 Search_Task_even	 Pie	 Pie	 Pie	 0.500000	 26.013875	 27.030218	 27.313082	 28.313793	 29.813391	 30.791637	 Omission	 5000.000000	 Omission	 Omission
-practice	 7	 Search_Task_odd	 Pie	 Pie	 Pie	 0.600000	 30.813400	 31.830323	 32.213618	 33.213712	 34.713384	 35.691643	 Omission	 5000.000000	 Omission	 Omission
+practice	 1	 Search_Task_odd	 Cookie	 Cookie	 None	 0.600000	 1.998667	 2.614729	 3.415032	 3.914781	 4.915441	 5.891908	 z	 0.546338	 Correct	 None
+practice	 2	 Search_Task_even	 Cookie	 Cookie	 Cookie	 0.500000	 6.899210	 7.415230	 8.214869	 8.698788	 9.714538	 10.691816	 z	 0.455414	 Correct	 Correct
+practice	 3	 Search_Task_odd	 Pie	 Pie	 Cookie	 0.400000	 11.700384	 12.181327	 12.915163	 13.398382	 14.398197	 15.391925	 m	 0.492376	 Correct	 Correct
+practice	 4	 Search_Task_even	 Cookie	 Cookie	 Pie	 0.400000	 16.398669	 16.865510	 17.615569	 18.098535	 19.098225	 20.091713	 z	 0.400494	 Correct	 Correct
+practice	 5	 Search_Task_odd	 Cookie	 Cookie	 Cookie	 0.400000	 21.098487	 21.565033	 22.314333	 22.798459	 23.797962	 24.791715	 z	 0.561264	 Correct	 Correct
+practice	 6	 Search_Task_even	 Pie	 Pie	 Cookie	 0.600000	 25.798608	 26.414784	 27.197481	 27.698295	 28.697356	 29.691666	 m	 0.489413	 Correct	 Correct
+practice	 7	 Search_Task_odd	 Pie	 Pie	 Pie	 0.400000	 30.698468	 31.164443	 31.898732	 32.397810	 33.398412	 34.391669	 m	 0.535194	 Correct	 Correct
+practice	 8	 Search_Task_even	 Pie	 Pie	 Pie	 0.500000	 35.398421	 35.914990	 36.698342	 37.198214	 38.198605	 39.191668	 m	 0.463133	 Correct	 Correct
+training	 1	 Search_Task_odd	 Pie	 Pie	 None	 0.400000	 1.999597	 2.501208	 3.332428	 3.699555	 4.699737	 5.691716	 m	 0.608876	 Correct	 None
