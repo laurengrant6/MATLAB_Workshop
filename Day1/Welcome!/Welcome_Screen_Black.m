@@ -36,7 +36,7 @@ Word_Size = Screen('TextBounds', windowPtr, 'Hello');%gets the size parameters f
 
 %Present the word on the screen
 
-DrawFormattedText(windowPtr, Hello, 'Center', 'Center', TextColor)%gets the word ready to present on screen with the parameters you want
+DrawFormattedText(windowPtr, Hello, 'Center', 'Center', TextColor);%gets the word ready to present on screen with the parameters you want
 
 
 Screen('Flip',windowPtr);%presents the word on the screen
